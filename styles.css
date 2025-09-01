@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a60000;
+    padding: 10px 20px;
+    color: #fff;
+}
+.logo img {
+    max-height: 60px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+.hero {
+    background-color: #c20000;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.services, .locations, .contact {
+    padding: 40px 20px;
+}
+.service-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.service-box {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 12px;
+    background-color: #a60000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}

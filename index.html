@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danlock Garage Ltd</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Danlock Garage Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contact-top">
+            <a href="tel:07768094660" class="phone">07768 094660</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Car Servicing & Repairs You Can Trust</h1>
+            <p>Two convenient locations in Falmouth — Boslowick Garage & Jubilee Road.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-columns">
+            <div class="service-box">
+                <h3>Boslowick Garage</h3>
+                <ul>
+                    <li>MOT Testing</li>
+                    <li>Servicing & Repairs</li>
+                    <li>No Tyres at this site</li>
+                </ul>
+            </div>
+            <div class="service-box">
+                <h3>Jubilee Road Garage</h3>
+                <ul>
+                    <li>Servicing & Repairs</li>
+                    <li>Tyres & Tracking</li>
+                    <li>No MOT Testing at this site</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations">
+        <h2>Our Locations</h2>
+        <div class="location">
+            <h3>Boslowick Garage</h3>
+            <p>Danlock, Boslowick Rd, Falmouth TR11 4EY</p>
+            <iframe src="https://www.google.com/maps?q=Danlock%20Boslowick%20Rd,%20Falmouth%20TR11%204EY&output=embed" width="100%" height="250" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <div class="location">
+            <h3>Jubilee Road Garage</h3>
+            <p>Danlock Garage Ltd, Jubilee Rd, Falmouth TR11 2BA</p>
+            <iframe src="https://www.google.com/maps?q=Danlock%20Garage%20Ltd,%20Jubilee%20Rd,%20Falmouth%20TR11%202BA&output=embed" width="100%" height="250" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <select name="location" required>
+                <option value="">Select Preferred Location</option>
+                <option value="Boslowick Garage">Boslowick Garage</option>
+                <option value="Jubilee Road Garage">Jubilee Road Garage</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Danlock Garage Ltd</p>
+        <p>Contact us: <a href="mailto:danlockgarageltd@gmail.com">danlockgarageltd@gmail.com</a> | <a href="tel:07768094660">07768 094660</a></p>
+    </footer>
+</body>
+</html>
