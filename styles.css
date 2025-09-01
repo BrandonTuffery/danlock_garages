@@ -262,6 +262,25 @@ footer a:hover {
     border: 1px solid #eee;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background: var(--accent);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+    display: block;
+}
 @media (max-width: 900px) {
     .service-columns {
         flex-direction: column;
@@ -280,5 +299,29 @@ footer a:hover {
     }
     .hero-content h1 {
         font-size: 2.1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        background: var(--primary-bg);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        padding: 24px 0;
+        gap: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        border-radius: 0 0 18px 18px;
+        display: none;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    header {
+        flex-direction: row;
+        gap: 0;
+        padding: 12px 10px;
     }
 }
