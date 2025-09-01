@@ -75,7 +75,7 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="contact.php" method="POST">
+        <form action="contact.php" method="POST" autocomplete="off">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="tel" name="phone" placeholder="Your Phone" required>
@@ -85,10 +85,14 @@
                 <option value="Jubilee Road Garage">Jubilee Road Garage</option>
             </select>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+            <!-- Honeypot field (hidden from users) -->
+            <div style="display:none;">
+                <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <!-- Simple math question -->
+            <label for="antispam">What is 3 + 4? <input type="number" name="antispam" id="antispam" required></label>
             <button type="submit">Send Message</button>
         </form>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </section>
 
     <footer>

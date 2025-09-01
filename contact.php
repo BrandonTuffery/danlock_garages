@@ -1,5 +1,14 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Honeypot check
+    if (!empty($_POST["website"])) {
+        die("Spam detected.");
+    }
+    // Simple math question check
+    if (!isset($_POST["antispam"]) || intval($_POST["antispam"]) !== 7) {
+        die("Anti-spam answer incorrect.");
+    }
+
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
