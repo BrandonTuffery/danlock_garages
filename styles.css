@@ -1,72 +1,198 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #222;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #23272f;
+    min-height: 100vh;
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a60000;
-    padding: 10px 20px;
+    background: #a60000;
+    padding: 18px 40px;
     color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
 }
 .logo img {
-    max-height: 60px;
+    max-height: 56px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
 }
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
 }
 nav a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffd700;
+}
+.contact-top .phone {
+    background: #fff;
+    color: #a60000;
+    padding: 8px 18px;
+    border-radius: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(166,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.contact-top .phone:hover {
+    background: #ffd700;
+    color: #a60000;
 }
 .hero {
-    background-color: #c20000;
+    background: linear-gradient(120deg, #a60000 60%, #c20000 100%);
     color: #fff;
-    padding: 60px 20px;
+    padding: 80px 20px 60px 20px;
     text-align: center;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 4px 24px rgba(166,0,0,0.08);
+}
+.hero-content h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: -0.02em;
+}
+.hero-content p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
 }
 .services, .locations, .contact {
-    padding: 40px 20px;
+    padding: 56px 20px 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.services h2, .locations h2, .contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #a60000;
 }
 .service-columns {
     display: flex;
-    gap: 20px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 .service-box {
-    flex: 1 1 300px;
-    background-color: #f4f4f4;
-    padding: 20px;
+    flex: 1 1 320px;
+    background: #fff;
+    padding: 28px 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.service-box:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(166,0,0,0.13);
+}
+.service-box h3 {
+    color: #a60000;
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+}
+.service-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+.service-box li {
+    margin-bottom: 7px;
+    font-size: 1.05rem;
+}
+.locations .location {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 22px 20px 18px 20px;
+    margin-bottom: 28px;
+}
+.locations .location h3 {
+    color: #a60000;
+    margin-bottom: 8px;
+}
+.locations .location p {
+    margin-bottom: 10px;
+}
+.locations iframe {
     border-radius: 8px;
+    border: 1px solid #eee;
 }
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: auto;
+    gap: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
 input, select, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 13px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+    border: 1.5px solid #a60000;
+    outline: none;
 }
 button {
-    padding: 12px;
-    background-color: #a60000;
+    padding: 14px;
+    background: linear-gradient(90deg, #a60000 60%, #c20000 100%);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(166,0,0,0.08);
+    transition: background 0.2s, transform 0.15s;
+}
+button:hover {
+    background: #ffd700;
+    color: #a60000;
+    transform: translateY(-2px) scale(1.02);
 }
 footer {
-    background-color: #222;
+    background: #23272f;
     color: #fff;
     text-align: center;
-    padding: 15px;
+    padding: 22px 10px 18px 10px;
+    font-size: 1.05rem;
+    border-radius: 24px 24px 0 0;
+    margin-top: 48px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+}
+
+@media (max-width: 900px) {
+    .service-columns {
+        flex-direction: column;
+        gap: 18px;
+    }
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 10px;
+    }
+    .services, .locations, .contact {
+        padding: 32px 8px 24px 8px;
+    }
+    form {
+        padding: 18px 8px;
+    }
 }
