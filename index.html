@@ -25,6 +25,7 @@
             <span></span>
             <span></span>
         </div>
+        <div class="nav-backdrop" id="nav-backdrop" style="display:none;"></div>
         <nav>
             <ul id="nav-list">
                 <li><a href="#home">Home</a></li>
@@ -141,12 +142,24 @@
     // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger-menu');
     const navList = document.getElementById('nav-list');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const navLinks = navList.querySelectorAll('a');
+    function closeNav() {
+        navList.classList.remove('open');
+        navBackdrop.style.display = 'none';
+    }
     hamburger.addEventListener('click', () => {
-        navList.classList.toggle('open');
+        const isOpen = navList.classList.toggle('open');
+        navBackdrop.style.display = isOpen ? 'block' : 'none';
     });
     hamburger.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') navList.classList.toggle('open');
+        if (e.key === 'Enter' || e.key === ' ') {
+            const isOpen = navList.classList.toggle('open');
+            navBackdrop.style.display = isOpen ? 'block' : 'none';
+        }
     });
+    navBackdrop.addEventListener('click', closeNav);
+    navLinks.forEach(link => link.addEventListener('click', closeNav));
     </script>
 </body>
 </html>

@@ -270,7 +270,7 @@ footer a:hover {
     width: 36px;
     height: 36px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1201;
 }
 .hamburger span {
     height: 4px;
@@ -282,46 +282,44 @@ footer a:hover {
     display: block;
 }
 @media (max-width: 900px) {
-    .service-columns {
+    .hamburger {
+        display: flex;
+    }
+    nav ul {
         flex-direction: column;
-        gap: 22px;
+        background: var(--primary-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 80px 0 0 0;
+        gap: 28px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        border-radius: 0;
+        display: none;
+        z-index: 1200;
+        align-items: center;
+        font-size: 1.4rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    .nav-backdrop {
+        display: block;
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(20,33,61,0.7);
+        z-index: 1199;
+        transition: opacity 0.3s;
     }
     header {
         flex-direction: column;
         gap: 14px;
         padding: 18px 10px;
     }
-    .services, .locations, .contact {
-        padding: 32px 8px 24px 8px;
-    }
-    form {
-        padding: 18px 8px;
-    }
-    .hero-content h1 {
-        font-size: 2.1rem;
-    }
-    nav ul {
-        flex-direction: column;
-        background: var(--primary-bg);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100vw;
-        padding: 24px 0;
-        gap: 18px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-        border-radius: 0 0 18px 18px;
-        display: none;
-    }
-    nav ul.open {
-        display: flex;
-    }
-    .hamburger {
-        display: flex;
-    }
-    header {
-        flex-direction: row;
-        gap: 0;
-        padding: 12px 10px;
-    }
+}
+@media (min-width: 901px) {
+    .nav-backdrop { display: none !important; }
 }
